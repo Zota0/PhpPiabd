@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js' integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js' integrity='sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==' crossorigin='anonymous'></script>
+
+    <link rel="stylesheet" href="jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form method="post" action='FormProcess.php'>
+        <div>
+            <label for="firstname">Imię</label>
+            <br>
+            <input required title='Wpisz swoje imię!' tabindex='1' placeholder='Twoje imię' type="text" name="firstname">
+        </div>
+        <div>
+            <label for="lastname">Nazwisko</label>
+            <br>
+            <input required title='Wpisz swoje nazwisko!' tabindex='2' placeholder='Twoje nazwisko.' type="text" name="lastname">
+        </div>
+        <div>
+            <label for="password">Hasło</label>
+            <br>
+            <input required title='Wpisz swoje hasło!' tabindex='3' placeholder='Wpisz swoje hasło.' minlength='8' type="password" name="password">
+        </div>
+        <div>
+            <label for="birthdate">Data urodzenia</label>
+            <br>
+            <input required title='Wybierz swoją datę urodzenia!' tabindex='4' placeholder='Twoja data urodzenia.' type="text" name="birthdate" id="birthdate">
+        </div>
+        <script>
+            $(function () {
+                $('#birthdate').datepicker();
+            });    
+        </script>
+        <div>
+            <button title='Gotowy? Utwórz!' tabindex='5' type="submit" value='create' name="create">Zrób</button>
+        </div>
+    </form>
+</body>
+</html>
