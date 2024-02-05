@@ -47,6 +47,8 @@
         } else {
             echo "Error ".$stmt->error;
         }
+        unset($table);
+        unset($stmt);
         unset($InsertIntoSQL);
         $stmt->close();
     }
